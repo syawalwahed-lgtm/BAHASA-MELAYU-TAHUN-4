@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misi Tatabahasa Tahun 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">🚀 MISI TATABAHASA</div>
+    <div class="teacher">MUHAMAD SYAWALWAHED<br><small>SK (P) JALAN YAHYA AWAL</small></div>
+  </header>
+
+  <main>
+    <section id="home" class="screen active">
+      <div class="hero">
+        <div class="mascot">🧑‍🚀</div>
+        <h1>Pengembaraan Bahasa Melayu Tahun 4</h1>
+        <p>Teroka nota, jawab 20 misi dan kumpul bintang!</p>
+        <div class="buttons">
+          <button onclick="show('notes')">📚 NOTA TATABAHASA</button>
+          <button class="primary" onclick="startGame()">🎮 MULA PERMAINAN</button>
+          <button onclick="show('info')">ℹ️ CARA BERMAIN</button>
+        </div>
+      </div>
+      <div class="cards">
+        <div>⭐ <b>20</b><br>Soalan</div>
+        <div>❤️ <b>3</b><br>Nyawa</div>
+        <div>🏆 <b>100</b><br>Markah maksimum</div>
+        <div>🔊 <b>Bunyi</b><br>Interaktif</div>
+      </div>
+    </section>
+
+    <section id="notes" class="screen">
+      <h2>📚 Nota Tatabahasa</h2>
+      <p class="subtitle">Baca dahulu sebelum memulakan misi.</p>
+      <div class="note-grid">
+        <article><h3>🔵 Kata Nama</h3><p>Perkataan yang merujuk orang, haiwan, benda, tempat atau perkara. Contoh: <b>guru, kucing, sekolah, buku</b>.</p></article>
+        <article><h3>🟢 Kata Kerja</h3><p>Perkataan yang menunjukkan perbuatan. Contoh: <b>berlari, membaca, menulis, makan</b>.</p></article>
+        <article><h3>🟡 Kata Adjektif</h3><p>Perkataan yang menerangkan sifat atau keadaan. Contoh: <b>cantik, tinggi, rajin, manis</b>.</p></article>
+        <article><h3>🟣 Kata Tugas</h3><p>Perkataan yang membantu membentuk ayat. Contoh: <b>dan, tetapi, di, ke, akan</b>.</p></article>
+        <article><h3>🟠 Kata Berimbuhan</h3><p>Kata dasar yang menerima imbuhan. Contoh: <b>berjalan, membaca, makanan</b>.</p></article>
+        <article><h3>🔴 Kata Ganda</h3><p>Perkataan yang mengalami pengulangan. Contoh: <b>murid-murid, kuih-muih, lelaki-lelaki</b>.</p></article>
+        <article><h3>🟤 Kata Majmuk</h3><p>Dua kata dasar yang membentuk satu makna. Contoh: <b>kereta api, alat tulis, tengah hari</b>.</p></article>
+      </div>
+      <button onclick="show('home')">⬅️ Kembali</button>
+    </section>
+
+    <section id="info" class="screen">
+      <h2>ℹ️ Cara Bermain</h2>
+      <div class="info-box">
+        <p>1. Tekan <b>Mula Permainan</b>.</p>
+        <p>2. Jawab 20 soalan satu demi satu.</p>
+        <p>3. Jawapan betul mendapat <b>5 markah</b>.</p>
+        <p>4. Anda mempunyai <b>3 nyawa</b>. Jawapan salah mengurangkan satu nyawa.</p>
+        <p>5. Gunakan nota sebagai ulang kaji sebelum bermain.</p>
+        <p>6. Pada akhir permainan, lihat markah dan tahap pencapaian.</p>
+      </div>
+      <button onclick="show('home')">⬅️ Kembali</button>
+    </section>
+
+    <section id="game" class="screen">
+      <div class="game-head">
+        <span id="progress">Soalan 1 / 20</span>
+        <span id="score">⭐ 0</span>
+        <span id="lives">❤️❤️❤️</span>
+      </div>
+      <div class="progressbar"><div id="bar"></div></div>
+      <div id="questionBox" class="question-box"></div>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback"></div>
+      <button id="nextBtn" class="primary hidden" onclick="nextQuestion()">Soalan Seterusnya ➜</button>
+    </section>
+
+    <section id="result" class="screen">
+      <div class="result-card">
+        <div id="resultIcon" class="result-icon">🏆</div>
+        <h2>Misi Selesai!</h2>
+        <div id="finalScore" class="final-score">0 / 100</div>
+        <p id="resultText"></p>
+        <button class="primary" onclick="startGame()">🔄 Cuba Lagi</button>
+        <button onclick="show('home')">🏠 Menu Utama</button>
+      </div>
+    </section>
+  </main>
+  <footer>© 2026 • Bahan Digital Bahasa Melayu Tahun 4 • MUHAMAD SYAWALWAHED</footer>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
